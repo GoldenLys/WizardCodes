@@ -42,3 +42,7 @@ function Generate() {
   var CL = $("#CL").html();
   $("#generate").append("<br><li>" + HYD(CL, CN) + "</li>");
 }
+
+function Clear() {
+  $("#generate").html("");
+}

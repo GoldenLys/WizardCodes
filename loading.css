@@ -1,0 +1,113 @@
+body {
+    background-color: #1b1c25;
+    color: #FFF;
+    text-align: center;
+}
+
+.ui.dropdown .menu, .ui.horizontal.segments {
+    background-color: #1b1c1d;
+    color: #FFF!important;
+}
+
+.ui.dropdown .menu>.item, .ui.dropdown .menu>.item:hover {
+    color: #FFF!important;
+}
+
+.loading-text {
+    margin-top: 60%!important;
+    text-align: center;
+    font-size: 1.5em;
+    transform-origin: 50% 100%;
+    transform: perspective(20em) rotateX(-25deg);
+}
+
+.loading-text:after {
+    white-space: pre;
+    content: "Loading";
+    animation: lds-text 1.5s linear infinite;
+}
+
+@keyframes lds-text {
+    25% {
+        content: "Loading. \A";
+    }
+    50% {
+        content: "Loading.. \A";
+    }
+    75% {
+        content: "Loading... \A";
+    }
+}
+
+.spinner {
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    width: 22em;
+    height: 22em;
+    border-radius: 15em;
+    border: 0.2em solid #1b1c1d;
+    transform-origin: 50% 60%;
+    transform: perspective(20em) rotateX(50deg);
+    animation: spinner-wiggle 1.5s infinite;
+}
+
+.spinner:before, .spinner:after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    box-sizing: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    opacity: .05;
+    border: inherit;
+    border-color: transparent;
+    animation: spinner-spin 1.5s cubic-bezier(0.8, 0.6, 0, 0.5) infinite, spinner-fade 1.5s linear infinite;
+}
+
+.spinner:before {
+    border-top-color: #05b8a0;
+}
+
+.spinner:after {
+    border-top-color: #05b8a0;
+    animation-delay: 0.5s;
+}
+
+@keyframes spinner-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-fade {
+    20% {
+        opacity: .1;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: .1;
+    }
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.controls {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.ui.celled.grid>.row, .ui.celled.grid>.column:not(.row), .ui.celled.grid>.row>.column {
+    -webkit-box-shadow: 0 -1px 0 0 #d4d4d500;
+    box-shadow: 0 -1px 0 0 #d4d4d500;
+}

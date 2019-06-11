@@ -3,6 +3,7 @@ body {
     color: #FFF;
     text-align: center;
     font-family: 'Electrolize', sans-serif;
+    font-size: 1em;
 }
 
 .ui.button {
@@ -119,4 +120,24 @@ body {
 
 .ui.form .grouped.fields {
     text-align: left;
+}
+
+#sidebar-btn {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    box-shadow: 0 0 0 0px #fff!important;
+}
+
+#copyright {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    right: 40%;
+    box-shadow: 0 0 0 0px #fff!important;
+}
+
+#viewer {
+    z-index: 500;
 }

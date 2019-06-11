@@ -24,6 +24,7 @@ function HYD(length, type) {
   $('.ui.dropdown').dropdown();
   $("#generate").on("click", function () { Generate(); });
   $("#clear").on("click", function () { Clear(); });
+  $("#sidebar-btn").on("click", function () { window.open('https://discordapp.com/invite/SBuYeHh', '_blank'); });
 })();
 
 function UpdateEngine() {

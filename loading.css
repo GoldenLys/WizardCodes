@@ -2,6 +2,11 @@ body {
     background-color: #1b1c25;
     color: #FFF;
     text-align: center;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.ui.button {
+    font-family: 'Electrolize', sans-serif;
 }
 
 .ui.dropdown .menu, .ui.horizontal.segments {

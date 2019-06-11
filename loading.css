@@ -9,7 +9,7 @@ body {
     color: #FFF!important;
 }
 
-.ui.dropdown .menu>.item, .ui.dropdown .menu>.item:hover {
+.ui.dropdown .menu>.item, .ui.dropdown .menu>.item:hover, .ui.checkbox label:hover, .ui.checkbox+label:hover, .ui.checkbox label, .ui.checkbox+label {
     color: #FFF!important;
 }
 
@@ -110,4 +110,8 @@ body {
 .ui.celled.grid>.row, .ui.celled.grid>.column:not(.row), .ui.celled.grid>.row>.column {
     -webkit-box-shadow: 0 -1px 0 0 #d4d4d500;
     box-shadow: 0 -1px 0 0 #d4d4d500;
+}
+
+.ui.form .grouped.fields {
+    text-align: left;
 }

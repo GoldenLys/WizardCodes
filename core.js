@@ -4,7 +4,12 @@ function HYD(length, type) {
   var Resultat = "";
   for (var h = 0; h < type; h++) {
     var result = "";
-    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    var characters = "";
+    if ($("#letters").is(":checked")) {
+      characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      if ($("#uppercase").is(":checked")) { characters = characters + "abcdefghijklmnopqrstuvwxyz"; }
+    }
+    if ($("#numbers").is(":checked")) { characters = characters + "0123456789"; }
     var charactersLength = characters.length;
     for (var i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -17,9 +22,8 @@ function HYD(length, type) {
 (function () {
   setInterval(UpdateEngine, 1000);
   $('.ui.dropdown').dropdown();
-  $("#generate").on("click", function() {
-
-  });
+  $("#generate").on("click", function () { Generate(); });
+  $("#clear").on("click", function () { Clear(); });
 })();
 
 function UpdateEngine() {
@@ -35,14 +39,19 @@ function UpdateEngine() {
     $("#q").show();
     loadState++;
   }
+  if ($("#letters").is(":checked")) {
+    $("#CH2").show();
+  } else { $("#CH2").hide(); }
 }
 
 function Generate() {
   var CN = $("#CN").html();
   var CL = $("#CL").html();
-  $("#generate").append("<br><li>" + HYD(CL, CN) + "</li>");
-}
 
+  if ($("#letters").is(":checked") || $("#numbers").is(":checked")) {
+    $("#results").append("<br><li>" + HYD(CL, CN) + "</li>");
+  }
+}
 function Clear() {
-  $("#generate").html("");
+  $("#results").html("");
 }

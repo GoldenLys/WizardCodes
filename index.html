@@ -29,7 +29,7 @@
     <div id="main" style="display: none;">
 
         <div class="ui internally celled grid">
-            <div class="row" style="height: 25rem;">
+            <div class="row">
             </div>
             <div class="row">
                 <div class="three wide column">
@@ -39,7 +39,8 @@
                         <div class="ui horizontal segments">
                             <div class="ui segment">Number of chains
                                 <div class="fluid ui inverted transparent input">
-                                    <div class="fluid ui black floating dropdown button" style="text-align: center;" tabindex="0">
+                                    <div class="fluid ui black floating dropdown button" style="text-align: center;"
+                                        tabindex="0">
                                         <div class="text" id="CN">3</div>
                                         <i class="dropdown icon"></i>
                                         <div class="menu transition" tabindex="-1">
@@ -59,7 +60,8 @@
                             </div>
                             <div class="ui segment">Chains length
                                 <div class="fluid ui inverted transparent input">
-                                    <div class="fluid ui black floating dropdown button" style="text-align: center;" tabindex="0">
+                                    <div class="fluid ui black floating dropdown button" style="text-align: center;"
+                                        tabindex="0">
                                         <div class="text" id="CL">4</div>
                                         <i class="dropdown icon"></i>
                                         <div class="menu transition" tabindex="-1">
@@ -77,12 +79,33 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><br>
+                        </div>
+                        <div class="ui form">
+                            <div class="grouped fields">
+                                <div class="ui field">
+                                    <div class="ui checkbox" id="CH1">
+                                        <input type="checkbox" id="letters" checked="checked">
+                                        <label>Use letters</label></div>
+                                </div>
+
+                                <div class="ui field">
+                                    <div class="ui checkbox" id="CH2">
+                                        <input type="checkbox" id="uppercase" checked="checked">
+                                        <label>Lowercase characters</label></div>
+                                </div>
+
+                                <div class="ui field">
+                                    <div class="ui checkbox" id="CH3">
+                                        <input type="checkbox" id="numbers" checked="checked">
+                                        <label>Use numbers</label></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="fluid ui buttons">
-                        <button class="ui black button" onclick="Generate();">Generate</button>
-                        <button class="ui black button" onclick="Clear();">Clear</button></div>
+                            <button class="ui black button" id="generate">Generate</button>
+                            <button class="ui black button" id="clear">Clear</button></div>
                         <br>
-                        <div id="generate" class="ui black message"></div>
+                        <div id="results" class="ui black message"></div>
                     </div>
                 </div>
                 <div class="three wide column">

@@ -1,0 +1,2 @@
+# WizardCodes
+Random code generator

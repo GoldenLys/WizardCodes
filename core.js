@@ -1,5 +1,4 @@
 var loadState = 0;
-
 function HYD(length, type) {
   var Resultat = "";
   for (var h = 0; h < type; h++) {
@@ -18,7 +17,6 @@ function HYD(length, type) {
   }
   return Resultat;
 }
-
 (function () {
   setInterval(UpdateEngine, 1000);
   $('.ui.dropdown').dropdown();
@@ -26,25 +24,21 @@ function HYD(length, type) {
   $("#clear").on("click", function () { Clear(); });
   $("#sidebar-btn").on("click", function () { window.open('https://discordapp.com/invite/SBuYeHh', '_blank'); });
 })();
-
 function UpdateEngine() {
   if (loadState < 3) {
     loadState++;
     $("#loading").show();
     $("#main").hide();
-    $("#q").hide();
   }
   if (loadState == 3) {
     $("#loading").hide();
     $("#main").show();
-    $("#q").show();
     loadState++;
   }
   if ($("#letters").is(":checked")) {
     $("#CH2").show();
   } else { $("#CH2").hide(); }
 }
-
 function Generate() {
   var CN = $("#CN").html();
   var CL = $("#CL").html();

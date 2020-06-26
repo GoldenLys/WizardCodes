@@ -11,7 +11,7 @@ body {
 }
 
 .ui.dropdown .menu, .ui.horizontal.segments {
-    background-color: #1b1c1d;
+    background-color: #1b1c25;
     color: #FFF!important;
 }
 
@@ -53,10 +53,21 @@ body {
     width: 22em;
     height: 22em;
     border-radius: 15em;
-    border: 0.2em solid #1b1c1d;
+    border: 0.2em solid #1b1c25;
     transform-origin: 50% 60%;
     transform: perspective(20em) rotateX(50deg);
     animation: spinner-wiggle 1.5s infinite;
+}
+
+.ui.black.button:hover, .ui.black.buttons .button:hover,
+.ui.black.button:focus, .ui.black.buttons .button:focus,
+.ui.black.button:active, .ui.black.buttons .button:active {
+    background-color: #232430;
+}
+
+.ui.black.button, .ui.black.buttons .button,
+.ui.black.message, .ui.inverted.message {
+    background-color: #1b1c25;
 }
 
 .spinner:before, .spinner:after {
@@ -141,3 +152,30 @@ body {
 #viewer {
     z-index: 500;
 }
+
+#results {
+    background-color: #232430;
+    min-height: 0;
+    padding: 0;
+}
+
+#results li {
+    padding: 5px 10px;
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+}
+
+#results li:hover {
+    background-color: #05b8a069;
+    border-radius: 5px;
+}
+
+#results li:active {
+    background-color: #05b8a0;
+    border-radius: 5px;
+}
+
+::selection {
+    background-color: transparent;
+    color: unset
+  }

@@ -23,6 +23,15 @@ function HYD(length, type) {
   $("#generate").on("click", function () { Generate(); });
   $("#clear").on("click", function () { Clear(); });
   $("#sidebar-btn").on("click", function () { window.open('https://discordapp.com/invite/SBuYeHh', '_blank'); });
+
+  $( "#results" ).on( "click", "li", function() {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(this).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+    console.log("TEXT COPIED.");
+  });
 })();
 function UpdateEngine() {
   if (loadState < 3) {
@@ -44,7 +53,7 @@ function Generate() {
   var CL = $("#CL").html();
 
   if ($("#letters").is(":checked") || $("#numbers").is(":checked")) {
-    $("#results").append("<br><li>" + HYD(CL, CN) + "</li>");
+    $("#results").append("<li id='code'>" + HYD(CL, CN) + "</li>");
   }
 }
 function Clear() {

@@ -1,130 +1,62 @@
 body {
-    background-color: #1b1c25;
+    background-color: rgb(30, 32, 43);
     color: #FFF;
     text-align: center;
     font-family: 'Electrolize', sans-serif;
-    font-size: 1em;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.ui.dropdown,
+.ui.dropdown .menu>.item {
+    text-align: center;
 }
 
 .ui.button {
     font-family: 'Electrolize', sans-serif;
 }
 
-.ui.dropdown .menu, .ui.horizontal.segments {
+.ui.dropdown .menu,
+.ui.horizontal.segments {
     background-color: #1b1c25;
-    color: #FFF!important;
+    color: #FFF !important;
 }
 
-.ui.dropdown .menu>.item, .ui.dropdown .menu>.item:hover, .ui.checkbox label:hover, .ui.checkbox+label:hover, .ui.checkbox label, .ui.checkbox+label {
-    color: #FFF!important;
+.ui.dropdown .menu>.item,
+.ui.dropdown .menu>.item:hover,
+.ui.checkbox label:hover,
+.ui.checkbox+label:hover,
+.ui.checkbox label,
+.ui.checkbox+label {
+    color: #FFF !important;
 }
 
-.loading-text {
-    margin-top: 60%!important;
-    text-align: center;
-    font-size: 1.5em;
-    transform-origin: 50% 100%;
-    transform: perspective(20em) rotateX(-25deg);
+.ui.inverted.segment,
+.ui.inverted.segments .segment,
+.ui.primary.inverted.segment {
+    background-color: #1b1c25;
+    color: rgba(255, 255, 255, .9);
 }
 
-.loading-text:after {
-    white-space: pre;
-    content: "Loading";
-    animation: lds-text 1.5s linear infinite;
-}
-
-@keyframes lds-text {
-    25% {
-        content: "Loading. \A";
-    }
-    50% {
-        content: "Loading.. \A";
-    }
-    75% {
-        content: "Loading... \A";
-    }
-}
-
-.spinner {
-    position: relative;
-    margin: auto;
-    box-sizing: border-box;
-    background-clip: padding-box;
-    width: 22em;
-    height: 22em;
-    border-radius: 15em;
-    border: 0.2em solid #1b1c25;
-    transform-origin: 50% 60%;
-    transform: perspective(20em) rotateX(50deg);
-    animation: spinner-wiggle 1.5s infinite;
-}
-
-.ui.black.button:hover, .ui.black.buttons .button:hover,
-.ui.black.button:focus, .ui.black.buttons .button:focus,
-.ui.black.button:active, .ui.black.buttons .button:active {
+.ui.black.button:hover,
+.ui.black.buttons .button:hover,
+.ui.black.button:focus,
+.ui.black.buttons .button:focus,
+.ui.black.button:active,
+.ui.black.buttons .button:active {
     background-color: #232430;
 }
 
-.ui.black.button, .ui.black.buttons .button,
-.ui.black.message, .ui.inverted.message {
+.ui.black.button,
+.ui.black.buttons .button,
+.ui.black.message,
+.ui.inverted.message {
     background-color: #1b1c25;
 }
 
-.spinner:before, .spinner:after {
-    content: "";
-    position: absolute;
-    left: -3px;
-    top: -3px;
-    box-sizing: inherit;
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-    opacity: .05;
-    border: inherit;
-    border-color: transparent;
-    animation: spinner-spin 1.5s cubic-bezier(0.8, 0.6, 0, 0.5) infinite, spinner-fade 1.5s linear infinite;
-}
-
-.spinner:before {
-    border-top-color: #05b8a0;
-}
-
-.spinner:after {
-    border-top-color: #05b8a0;
-    animation-delay: 0.5s;
-}
-
-@keyframes spinner-spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes spinner-fade {
-    20% {
-        opacity: .1;
-    }
-    40% {
-        opacity: 1;
-    }
-    60% {
-        opacity: .1;
-    }
-}
-
-.container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.controls {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-}
-
-.ui.celled.grid>.row, .ui.celled.grid>.column:not(.row), .ui.celled.grid>.row>.column {
+.ui.celled.grid>.row,
+.ui.celled.grid>.column:not(.row),
+.ui.celled.grid>.row>.column {
     -webkit-box-shadow: 0 -1px 0 0 #d4d4d500;
     box-shadow: 0 -1px 0 0 #d4d4d500;
 }
@@ -137,16 +69,26 @@ body {
     z-index: 1000;
     position: fixed;
     right: 0;
-    box-shadow: 0 0 0 0px #fff!important;
+    box-shadow: 0 0 0 0px #fff !important;
 }
 
-#copyright {
+.copyright {
     z-index: 1;
     position: fixed;
     bottom: 0;
     left: 40%;
     right: 40%;
-    box-shadow: 0 0 0 0px #fff!important;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    box-shadow: 0 0 0 0px #fff !important;
+}
+
+.copyright>span {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 #viewer {
@@ -178,4 +120,19 @@ body {
 ::selection {
     background-color: transparent;
     color: unset
-  }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    background: center / cover no-repeat url("bg.jpg");
+}
+
+#MainColumn {
+    padding-bottom: 32px;
+}

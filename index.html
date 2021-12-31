@@ -5,27 +5,15 @@
     <title>WizardCodes</title>
     <meta charset="UTF-8" name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css">
     <link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="loading.css?v=1.4" />
 </head>
 
 <body>
-    <div id="container" class="container">
-        <div id="output" class="container"></div>
-    </div>
-    <div style="display: none;" id="controls" class="controls"></div>
-    <div id="loading">
-        <div class="ui equal width center aligned padded grid">
-            <div class="row">
-                <div class="spinner">
-                    <p class="loading-text"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="main" style="display: none;">
+    <div class="background"></div>
+    <div id="main">
         <div id="sidebar-btn" class="big ui inverted icon button right floated"><i class="discord icon"></i></div>
         <div class="ui internally celled grid">
             <div class="row">
@@ -33,67 +21,65 @@
             <div class="row">
                 <div class="three wide column">
                 </div>
-                <div class="ten wide column">
+                <div id="MainColumn" class="ten wide column">
                     <div class="ui black message" id="viewer">
                         <div class="ui horizontal segments">
-                            <div class="ui segment">Number of chains
+                            <div class="ui inverted segment">Number of chains
                                 <div class="fluid ui inverted transparent input">
-                                    <div class="fluid ui black floating dropdown button" style="text-align: center;"
-                                        tabindex="0">
-                                        <div class="text" id="CN">3</div>
+                                    <div class="fluid ui black floating dropdown button" tabindex="0">
+                                        <div class="text" id="chains_number">3</div>
                                         <i class="dropdown icon"></i>
                                         <div class="menu transition" tabindex="-1">
-                                            <div class="item" style="text-align: center;">1</div>
-                                            <div class="item" style="text-align: center;">2</div>
-                                            <div class="item" style="text-align: center;">3</div>
-                                            <div class="item" style="text-align: center;">4</div>
-                                            <div class="item" style="text-align: center;">5</div>
-                                            <div class="item" style="text-align: center;">6</div>
-                                            <div class="item" style="text-align: center;">7</div>
-                                            <div class="item" style="text-align: center;">8</div>
-                                            <div class="item" style="text-align: center;">9</div>
-                                            <div class="item" style="text-align: center;">10</div>
-                                            <div class="item" style="text-align: center;">11</div>
-                                            <div class="item" style="text-align: center;">12</div>
-                                            <div class="item" style="text-align: center;">13</div>
-                                            <div class="item" style="text-align: center;">14</div>
-                                            <div class="item" style="text-align: center;">15</div>
-                                            <div class="item" style="text-align: center;">16</div>
-                                            <div class="item" style="text-align: center;">17</div>
-                                            <div class="item" style="text-align: center;">18</div>
-                                            <div class="item" style="text-align: center;">19</div>
-                                            <div class="item" style="text-align: center;">20</div>
+                                            <div class="item">1</div>
+                                            <div class="item">2</div>
+                                            <div class="item">3</div>
+                                            <div class="item">4</div>
+                                            <div class="item">5</div>
+                                            <div class="item">6</div>
+                                            <div class="item">7</div>
+                                            <div class="item">8</div>
+                                            <div class="item">9</div>
+                                            <div class="item">10</div>
+                                            <div class="item">11</div>
+                                            <div class="item">12</div>
+                                            <div class="item">13</div>
+                                            <div class="item">14</div>
+                                            <div class="item">15</div>
+                                            <div class="item">16</div>
+                                            <div class="item">17</div>
+                                            <div class="item">18</div>
+                                            <div class="item">19</div>
+                                            <div class="item">20</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="ui segment">Chains length
+                            <div class="ui inverted segment">Chains length
                                 <div class="fluid ui inverted transparent input">
-                                    <div class="fluid ui black floating dropdown button" style="text-align: center;"
-                                        tabindex="0">
-                                        <div class="text" id="CL">4</div>
+                                    <div class="fluid ui black floating dropdown button" tabindex="0">
+                                        <div class="text" id="chains_length">4</div>
                                         <i class="dropdown icon"></i>
                                         <div class="menu transition" tabindex="-1">
-                                            <div class="item" style="text-align: center;">1</div>
-                                            <div class="item" style="text-align: center;">2</div>
-                                            <div class="item" style="text-align: center;">3</div>
-                                            <div class="item" style="text-align: center;">4</div>
-                                            <div class="item" style="text-align: center;">5</div>
-                                            <div class="item" style="text-align: center;">6</div>
-                                            <div class="item" style="text-align: center;">7</div>
-                                            <div class="item" style="text-align: center;">8</div>
-                                            <div class="item" style="text-align: center;">9</div>
-                                            <div class="item" style="text-align: center;">10</div>
-                                            <div class="item" style="text-align: center;">11</div>
-                                            <div class="item" style="text-align: center;">12</div>
-                                            <div class="item" style="text-align: center;">13</div>
-                                            <div class="item" style="text-align: center;">14</div>
-                                            <div class="item" style="text-align: center;">15</div>
-                                            <div class="item" style="text-align: center;">16</div>
-                                            <div class="item" style="text-align: center;">17</div>
-                                            <div class="item" style="text-align: center;">18</div>
-                                            <div class="item" style="text-align: center;">19</div>
-                                            <div class="item" style="text-align: center;">20</div>
+                                            <div class="item">1</div>
+                                            <div class="item">2</div>
+                                            <div class="item">3</div>
+                                            <div class="item">4</div>
+                                            <div class="item">5</div>
+                                            <div class="item">6</div>
+                                            <div class="item">7</div>
+                                            <div class="item">8</div>
+                                            <div class="item">9</div>
+                                            <div class="item">10</div>
+                                            <div class="item">11</div>
+                                            <div class="item">12</div>
+                                            <div class="item">13</div>
+                                            <div class="item">14</div>
+                                            <div class="item">15</div>
+                                            <div class="item">16</div>
+                                            <div class="item">17</div>
+                                            <div class="item">18</div>
+                                            <div class="item">19</div>
+                                            <div class="item">20</div>
                                         </div>
                                     </div>
                                 </div>
@@ -102,41 +88,66 @@
                         <div class="ui form">
                             <div class="grouped fields">
                                 <div class="ui field">
-                                    <div class="ui checkbox" id="CH1">
-                                        <input type="checkbox" id="letters" checked="checked">
-                                        <label>Use letters</label></div>
+                                    <div class="ui checkbox" id="checkbox1">
+                                        <input type="checkbox" id="letters" checked>
+                                        <label>Use letters</label>
+                                    </div>
                                 </div>
 
                                 <div class="ui field">
-                                    <div class="ui checkbox" id="CH2">
-                                        <input type="checkbox" id="uppercase" checked="checked">
-                                        <label>Lowercase characters</label></div>
+                                    <div class="ui checkbox" id="checkbox2">
+                                        <input type="checkbox" id="lowercase">
+                                        <label>Lowercase characters</label>
+                                    </div>
                                 </div>
 
                                 <div class="ui field">
-                                    <div class="ui checkbox" id="CH3">
-                                        <input type="checkbox" id="numbers" checked="checked">
-                                        <label>Use numbers</label></div>
+                                    <div class="ui checkbox" id="checkbox3">
+                                        <input type="checkbox" id="numbers" checked>
+                                        <label>Use numbers</label>
+                                    </div>
+                                </div>
+
+                                <div class="ui field">
+                                    <div class="ui checkbox" id="checkbox4">
+                                        <input type="checkbox" id="binaries">
+                                        <label>Binary numbers only</label>
+                                    </div>
+                                </div>
+
+                                <div class="ui field">
+                                    <div class="ui checkbox" id="checkbox5">
+                                        <input type="checkbox" id="symbols" checked>
+                                        <label>Use symbols</label>
+                                    </div>
+                                </div>
+
+                                <div class="ui field">
+                                    <div class="ui checkbox" id="checkbox6">
+                                        <input type="checkbox" id="symbols2">
+                                        <label>Use advanced symbols</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="fluid ui buttons">
                             <button class="ui black button" id="generate">Generate</button>
-                            <button class="ui black button" id="clear">Clear</button></div>
+                            <button class="ui black button" id="clear">Clear</button>
+                        </div>
                         <br>
                         <div id="results" class="ui black message"></div>
+                        <div class="fluid ui black button" id="copyAll">Copy all codes</div>
                     </div>
                 </div>
                 <div class="three wide column">
                 </div>
             </div>
         </div>
-        <div id="copyright">Made by Purple Wizard#0984</div>
+        <div id="copyright" class="copyright">Wizard Codes v?<span>Made by Purple Wizard#0984</span></div>
     </div>
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="https://semantic-ui.com/dist/semantic.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.js"></script>
 <script type="text/javascript" src="core.js?v=1.4"></script>
-<script type="text/javascript" src="index.js?v=1.4"></script>
 
 </html>

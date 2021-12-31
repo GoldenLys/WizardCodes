@@ -1,2 +1,2 @@
 # WizardCodes
-Random code generator
+Random code & password generator made with Javascript.
